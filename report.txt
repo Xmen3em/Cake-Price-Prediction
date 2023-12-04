@@ -1,0 +1,30 @@
+1. there is a low positive correlation between (price) and (time taken) 
+
+2. there is a low negative correlation between (price) and (amount) 
+
+3. there is a high positive correlation between (price) and (ingredients_cost) 
+
+4. There are no outlies 
+
+5. There are no missing values 
+
+6. encoding categorical features;
+                                    a- lable encoder (Design_Complexity, gender)
+                                    b- dmmies(one hot encoder) (Sold_on, Size)
+
+7. apply feature selection (ANOVA test) and before we apply (correlation matrix) we will ignore (Amount) feature as it has a low correlation and low score of ANOVA Test
+
+8. i applied  a train test split with test size = 20% and train size = 80%
+
+9. normalize the data by (StandardScaler method) as the standardization is carried out for features that are normally distribution
+
+10. i used a 2 models (non-tree-based models) (linear regression models and support vector regression with kernel ('rbf)) 
+
+11. linear regreesion is the best model with accuracy 97.72% by using the (r2_score) metrics and (MAE) is 0.1224
+
+12. A discussion of any challenges:
+                                    It was difficult to deal with standardization because when we predicted the data
+                                    we found many errors, I dealt with this point by applying standardization after applying
+                                    the train_test_split on independent and dependent features and when I wanted to predict
+                                    a new variable, I applied a transformation on some independent features and apply the inverse transformation
+                                    on the prediction result
